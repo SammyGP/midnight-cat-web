@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="I’m making my first game. Here’s the latest playable bit."
+    >
+    <title>Cat game builds</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#player">Skip to build</a>
+
+    <header class="site-header">
+      <h1>Cat game builds</h1>
+      <p class="intro">I’m making my first game. Here’s the latest playable bit.</p>
+    </header>
+
+    <main class="page-shell">
+      <section class="player-panel" aria-labelledby="player-title">
+        <h2 id="player-title" class="visually-hidden">Build player</h2>
+
+        <div id="player" class="player-frame">
+          <iframe
+            id="build-frame"
+            title="Latest playable cat game development build"
+            aria-describedby="build-status"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+            tabindex="-1"
+          ></iframe>
+
+          <div id="player-placeholder" class="player-placeholder">
+            <div>
+              <p id="placeholder-title" class="placeholder-title">
+                Loading the latest build…
+              </p>
+              <p id="placeholder-copy" class="placeholder-copy">
+                Checking whether a playable build is available.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="status-row">
+          <p
+            id="build-status"
+            class="build-status"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+            data-state="loading"
+          >
+            Loading the latest build…
+          </p>
+          <p id="build-date" class="build-date" hidden></p>
+        </div>
+      </section>
+
+      <section class="build-notes" aria-labelledby="build-notes-title">
+        <h2 id="build-notes-title">About this development build</h2>
+
+        <div
+          id="build-details"
+          class="build-details"
+          aria-live="polite"
+          aria-busy="true"
+        >
+          <p class="empty-message">Loading build details…</p>
+        </div>
+
+        <p class="artwork-notice">
+          The House Cat uses prototype artwork. Enemy presentation is placeholder
+          artwork.
+        </p>
+
+        <p class="notices-link">
+          <a href="./builds/latest/third-party-notices.html">
+            Godot license and third-party notices
+          </a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

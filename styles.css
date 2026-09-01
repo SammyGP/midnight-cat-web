@@ -1,0 +1,281 @@
+:root {
+  color-scheme: dark;
+  --background: #101114;
+  --surface: #17191d;
+  --surface-strong: #0b0c0f;
+  --text: #f4f1ea;
+  --muted: #aaa8a2;
+  --border: #303238;
+  --focus: #f0a56f;
+  --error: #ef9b91;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 20rem;
+  background: var(--background);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text);
+  background: var(--background);
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 10;
+  padding: 0.65rem 0.8rem;
+  color: var(--background);
+  background: var(--text);
+  border-radius: 0.35rem;
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header,
+.page-shell {
+  width: min(72rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  padding-block: 2.25rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0.35rem;
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.intro {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.page-shell {
+  padding-block: 1.25rem 3rem;
+}
+
+.player-panel {
+  min-width: 0;
+}
+
+.player-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+}
+
+.player-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: var(--surface-strong);
+}
+
+.player-placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  text-align: center;
+  background: var(--surface-strong);
+}
+
+.player-placeholder[hidden] {
+  display: none;
+}
+
+.placeholder-title {
+  margin-bottom: 0.35rem;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: 650;
+}
+
+.placeholder-copy {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.status-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.7rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.build-status,
+.build-date {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.build-status[data-state="error"] {
+  color: var(--error);
+}
+
+.build-notes {
+  padding-top: 1.5rem;
+}
+
+.build-details {
+  max-width: 68rem;
+}
+
+.build-entry h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.build-entry time {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.4rem;
+}
+
+.detail-grid h4 {
+  margin: 0 0 0.65rem;
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.detail-grid ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.detail-grid li {
+  line-height: 1.55;
+}
+
+.detail-grid li + li {
+  margin-top: 0.4rem;
+}
+
+.artwork-notice,
+.notices-link {
+  max-width: 48rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.artwork-notice {
+  margin: 1.5rem 0 0;
+}
+
+.notices-link {
+  margin: 0.45rem 0 0;
+}
+
+.notices-link a {
+  color: var(--text);
+}
+
+.empty-message {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 0.2rem solid var(--focus);
+  outline-offset: 0.18rem;
+}
+
+@media (max-width: 40rem) {
+  .site-header,
+  .page-shell {
+    width: min(100% - 1rem, 72rem);
+  }
+
+  .site-header {
+    padding-top: 1.5rem;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .status-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
