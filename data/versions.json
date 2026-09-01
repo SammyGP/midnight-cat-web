@@ -3,25 +3,28 @@
   "versions": [
     {
       "id": "latest",
-      "label": "Latest development build — Damage, death, and restart",
+      "label": "Latest development build — House Cat, now walking",
       "date": "2026-09-01",
       "path": "./builds/latest/index.html",
       "changes": [
-        "House Cat and Rats now have health and can die.",
-        "Rat bites and Claw Swipe apply damage and knockback.",
-        "Defeat shows a summary and restarts with the same deterministic setup."
+        "This is the current normal first-level build, packaged for the browser without Web-only gameplay changes.",
+        "The House Cat uses two walk frames while moving and the original sprite while standing still.",
+        "The normal title, pause, quit-to-title, damage, death, and same-seed restart flow is included."
       ],
       "controls": [
+        "Press Enter on the title screen to start.",
         "Move with WASD.",
         "Pounce with Space.",
         "Claw Swipe fires automatically.",
+        "Press Escape to pause.",
         "Press Enter or R after defeat to restart."
       ],
       "limitations": [
-        "Unfinished development build with prototype and placeholder presentation.",
+        "Unfinished first-level development build with prototype House Cat art and placeholder enemies.",
         "Eighteen Rats spawn once; there is no timed stream or win condition.",
         "Automatic Claw may defeat every Rat before the House Cat, so the defeat summary and post-defeat restart may not appear in normal play.",
         "XP, progression, choices, and rewards are not implemented.",
+        "Exit ends the browser session. Reload the page to start again.",
         "Verified in desktop Chromium with a keyboard. Other browsers, controllers, and touch input are untested."
       ]
     }

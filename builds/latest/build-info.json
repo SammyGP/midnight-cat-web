@@ -1,7 +1,7 @@
 {
   "channel": "latest",
   "godotVersion": "4.7.2.stable.official.ed1daf0bf",
-  "configuration": "Automatic Claw Swipe; i-frame Pounce; eighteen Rats spawn once",
+  "configuration": "Normal first-level build; Automatic Claw Swipe; i-frame Pounce; eighteen Rats spawn once",
   "ratCount": 18,
   "seed": 41001
 }

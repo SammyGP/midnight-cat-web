@@ -62,7 +62,7 @@ Only replace `builds/latest/` after the matching selected development checkpoint
 
 Serve the complete repository over local HTTP and recheck the page, manifest, iframe, controls, limitations, notice link, response statuses, content types, browser console, keyboard focus, responsive layout, reload behavior, and the selected gameplay evidence. Keep repository content free of credentials, private source metadata, local paths, and internal task material.
 
-The current export is about 40.3 MB (38.4 MiB); almost all of that is Godot's WebAssembly runtime. Reusing the `latest` path does not remove prior binary revisions from Git history, although Git can reuse unchanged blobs.
+The current export is about 40.4 MB (38.5 MiB); almost all of that is Godot's WebAssembly runtime. Reusing the `latest` path does not remove prior binary revisions from Git history, although Git can reuse unchanged blobs.
 
 Before each selected replacement, measure the candidate's incremental packed Git-object growth in a disposable full clone and record the resulting published-tree size. Continue with ordinary commits only while the repository and published site remain safely below 800 MiB. Stop for a storage and deployment decision before a replacement would cross, or cannot demonstrate compliance with, that limit. Do not use a release, automated workflow, force-push, or history rewrite as a storage workaround.
 
